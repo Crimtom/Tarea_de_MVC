@@ -1,0 +1,43 @@
+﻿@model Tarea_de_MVC.Models.votos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>votos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_votante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_votante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edad_votante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad_votante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.voto_candidato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.voto_candidato)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cedula_votante }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,35 @@
+﻿@model Tarea_de_MVC.Models.plataformas
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>plataformas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.posicion_espectro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.posicion_espectro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partidos.nombre_partido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partidos.nombre_partido)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.plataforma_nombre }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

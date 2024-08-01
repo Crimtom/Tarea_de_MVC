@@ -1,0 +1,27 @@
+﻿@model Tarea_de_MVC.Models.partidos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>partidos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.miembros)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miembros)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.nombre_partido }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

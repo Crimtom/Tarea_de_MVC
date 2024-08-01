@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Tarea_de_MVC.Models.plataformas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.posicion_espectro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.partidos.nombre_partido)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.posicion_espectro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.partidos.nombre_partido)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.plataforma_nombre }) |
+            @Html.ActionLink("Details", "Details", new { id=item.plataforma_nombre }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.plataforma_nombre })
+        </td>
+    </tr>
+}
+
+</table>
