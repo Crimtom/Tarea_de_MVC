@@ -4,16 +4,18 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Create</h2>
+<center>
+    <h2>Agregar Candidato</h2>
+</center>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
+<center>
     <div class="form-horizontal">
-        <h4>candidatos</h4>
+        <h4>Ingrese los datos correspondientes al candidato que desea agregar</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -58,15 +60,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Añadir" class="btn btn-default" />
             </div>
         </div>
     </div>
+</center>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
