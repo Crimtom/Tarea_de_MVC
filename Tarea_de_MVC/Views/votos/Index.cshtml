@@ -3,17 +3,17 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+
 }
 
-<h2>Index</h2>
+<h2>Resultados de las votaciones</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.nombre_votante)
+
         </th>
         <th>
             @Html.DisplayNameFor(model => model.edad_votante)
@@ -35,12 +35,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.voto_candidato)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.cedula_votante }) |
-            @Html.ActionLink("Details", "Details", new { id=item.cedula_votante }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.cedula_votante })
-        </td>
     </tr>
 }
-
 </table>
+
+
+

@@ -23,6 +23,8 @@ namespace Tarea_de_MVC.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
+            modelBuilder.Entity<candidatos>()
+                .HasRequired(c => c.nombre);
         }
     
         public virtual DbSet<candidatos> candidatos { get; set; }

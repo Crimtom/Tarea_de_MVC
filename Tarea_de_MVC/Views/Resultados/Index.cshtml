@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Tarea_de_MVC.ViewModel.ResultadosViewModel>
+
+@{
+    ViewBag.Title = "Resultados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h2>Resultados</h2>
+</center>
+
+<table class="table">
+    <tr>
+        <th>
+            Candidato 
+                @{ 
+                //  candi_nombre
+                }
+        </th>
+        <th>
+            Voto
+            @{ 
+                // voto_nombre
+            }
+        </th>
+    </tr>
+@foreach (var Item in Model)
+            {
+                <tr>
+                    <td>@Item.candi_nombre</td>
+                    <td>@Item.voto_nombre</td>
+                </tr>
+            }
+</table>
+

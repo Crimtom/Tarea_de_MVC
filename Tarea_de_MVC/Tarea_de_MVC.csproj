@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ResultadosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -156,6 +157,7 @@
     <Compile Include="Controllers\partidosController.cs" />
     <Compile Include="Controllers\votosController.cs" />
     <Compile Include="Controllers\plataformasController.cs" />
+    <Compile Include="ViewModel\ResultadosViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -246,9 +248,11 @@
     <Content Include="Views\plataformas\Details.cshtml" />
     <Content Include="Views\plataformas\Edit.cshtml" />
     <Content Include="Views\plataformas\Index.cshtml" />
+    <Content Include="Views\Resultados\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Results\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
